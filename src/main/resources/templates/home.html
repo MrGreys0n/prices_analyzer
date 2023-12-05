@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Main Page</title>
+  <link rel="stylesheet" type="text/css" th:href="@{../static/fragments/header.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{../static/home.css}">
+</head>
+<body>
+
+<div id="navbar" th:replace="~{fragments/header :: header}"></div>
+
+<h1>Главная</h1>
+
+<!-- Поиск -->
+<form action="/search" method="get">
+  <label for="query">Поиск:</label>
+  <input type="text" id="query" name="query" required>
+  <button type="submit">Искать</button>
+</form>
+
+</body>
+</html>

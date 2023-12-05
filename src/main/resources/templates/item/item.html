@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details</title>
+</head>
+<body>
+<h2>Item Details</h2>
+<div>
+    <p><strong>Name:</strong> <span th:text="${name}"></span></p>
+    <p><strong>Price:</strong> <span th:text="${price}"></span></p>
+    <p><strong>Store:</strong> <span th:text="${store}"></span></p>
+    <p><strong>Link:</strong> <a th:href="@{${link}}" target="_blank" th:text="${link}"></a></p>
+</div>
+</body>
+</html>

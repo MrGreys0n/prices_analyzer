@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Item List</title>
+  <link rel="stylesheet" type="text/css" th:href="@{../../static/fragments/header.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{../../static/item/item-list.css}">
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<h1>Список товаров</h1>
+
+<table border="1">
+  <thead>
+  <tr>
+    <th>Название</th>
+    <th>Минимальная цена</th>
+    <th>Ссылка</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="item : ${items}">
+    <td th:text="${item.name}"></td>
+    <td th:text="${item.price}"></td>
+    <td>
+      <a th:href="@{${item.shop}}" target="_blank">
+        <span class="link-arrow">→</span>
+      </a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

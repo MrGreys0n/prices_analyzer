@@ -1,0 +1,37 @@
+/* Стили для таблицы */
+table {
+    margin: 0 auto; /* Центрирование таблицы */
+    width: max-content;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Стили для заголовка таблицы */
+thead {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    width: 1%; /* Уменьшение размера столбцов до размера контента */
+}
+
+.link-arrow {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    width: 20px; /* Желаемая ширина стрелки */
+    text-align: center;
+    font-size: 16px; /* Желаемый размер шрифта */
+}
+
+.link-arrow:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+}
